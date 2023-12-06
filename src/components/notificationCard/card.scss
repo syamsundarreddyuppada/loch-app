@@ -1,0 +1,94 @@
+.card {
+  padding: 14px;
+  border-radius: 8.4px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 27.5%,
+      rgba(22, 93, 255, 0.16) 157.71%
+    ),
+    #fff;
+  box-shadow: 0px 0.7px 0.7px 0px rgba(0, 0, 0, 0.04),
+    0px 2.8px 7px 0px rgba(0, 0, 0, 0.04);
+  width: 190px;
+  height: 172px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      color: var(--grey-900, #19191a);
+      text-align: right;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 10.92px */
+    }
+  }
+  .contentBell {
+    .bell {
+      max-width: 129px;
+      width: 100%;
+    }
+    p {
+      color: var(--grey-900, #19191a);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 16.8px */
+      padding-top: 14px;
+    }
+    input {
+      border-radius: 5.6px;
+      border: 0.7px solid var(--neutral-300, #d4d4d4);
+      background: #fff;
+      padding: 11px 11.2px;
+      color: var(--grey-900, #19191a);
+      font-family: Inter;
+      font-size: 9.1px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 10.92px */
+      margin-top: 15.5px;
+      outline: none;
+    }
+  }
+  .contentNotify {
+    p {
+      color: var(--grey-900, #19191a);
+      font-family: Inter;
+      font-size: 11.2px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 13.44px */
+    }
+  }
+}
+
+select {
+  margin-top: 14px;
+  border: none;
+  outline: none;
+  border-radius: 2.8px;
+  background: var(--grey-50, rgba(229, 229, 230, 0.5));
+  padding: 4.2px 14px 4.2px 4.2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../assets/triangle-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 7px;
+}
+.space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .contentBell {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    p {
+      font-size: 11.2px;
+    }
+  }
+}

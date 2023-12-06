@@ -1,0 +1,244 @@
+.App {
+  height: 100%;
+  background: #000000;
+}
+.wrap {
+  display: flex;
+  .contentLeft {
+    flex-basis: 55.6%;
+    background: radial-gradient(
+      92.19% 89.74% at 32.27% 91.27%,
+      rgba(31, 169, 17, 0.81) 17.21%,
+      #2f15d0 64.58%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.contentNotification {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 66px;
+  padding: 86px 0 0 62px;
+  .notification {
+    flex-basis: 50%;
+    .menu {
+      .menuImg {
+        display: none;
+            filter: invert(1);
+
+      }
+    }
+    span {
+      display: block;
+      color: #f2f2f2;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      font-size: 31px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      padding: 16px 0;
+    }
+    p {
+      color: #f2f2f2;
+
+      font-size: 16px;
+      font-style: normal;
+      line-height: 120%;
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+  .contentScroll {
+    overflow-x: hidden;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(to left, transparent 0%, #000000 100%);
+      z-index: 10;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      border-radius: 7px !important;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(to right, transparent 0%, #000000 100%);
+      z-index: 10;
+      top: 0;
+      right: 0;
+      opacity: 0.8;
+      border-radius: 0;
+    }
+  }
+  .scroller {
+    display: flex;
+    gap: 14px;
+    width: 450px;
+  }
+}
+
+.contentPortfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 38px;
+  padding-top: 72px;
+  img {
+    display: block;
+    object-fit: contain;
+  }
+  .contentEye {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    span {
+      color: #f2f2f2;
+      text-align: right;
+
+      font-size: 31px;
+      font-style: normal;
+      line-height: 120%;
+      padding: 16px 0;
+      max-width: 305px;
+      width: 100%;
+    }
+    p {
+      color: #f2f2f2;
+      text-align: right;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 120%;
+      max-width: 298px;
+      width: 100%;
+    }
+  }
+}
+
+.testimonial {
+  .head {
+    p {
+      color: #f2f2f2;
+      text-align: right;
+
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      padding: 22px 0 20px;
+    }
+    .divider {
+      background: rgba(229, 229, 230, 0.5);
+      width: 100%;
+      height: 1px;
+    }
+  }
+  .wrapSplide {
+    overflow: hidden;
+  }
+  .slider {
+    padding-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    padding-left: 62px;
+    padding: 40px 0 62px 62px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    .contentLeft {
+      flex-basis: 100%;
+    }
+  }
+  .contentNotification {
+    padding: 40px 25px 0;
+    flex-direction: column;
+    .notification {
+      flex-basis: 100%;
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        .menuImg {
+          display: block;
+        }
+      }
+      span {
+        font-size: 24px;
+      }
+      p {
+        width: 90%;
+        max-width: unset;
+        font-size: 14px;
+      }
+    }
+    .scroller {
+      width: calc(100vw - 15vw);
+    }
+  }
+
+  .contentPortfolio {
+    .contentEye {
+      span {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .testimonial {
+    // .wrapSplide{
+    //   width: 100%;
+    // }
+    .slider {
+      padding: 40px 0 62px 25px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contentPortfolio {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .imgPort {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .contentEye {
+      span {
+        width: 100%;
+        max-width: unset;
+      }
+      p {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// @media (max-width: 600px) {
+//   .contentNotification {
+//     .scroller {
+//       width: calc(100vw - 30vw);
+//     }
+//   }
+// }
