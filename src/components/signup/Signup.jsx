@@ -32,6 +32,12 @@ const Signup = ({menuActive,setMenuActive}) => {
 
 
 
+  }
+  
+  const handleClose = () => { 
+    setMenuActive()
+          document.body.style.overflowY = "auto";
+
    }
   return (
       <div className={`signup ${menuActive ? "menuOn" :"menuOf"}`}>
@@ -40,7 +46,7 @@ const Signup = ({menuActive,setMenuActive}) => {
       {validEmail ? <p className='error'>Please enter a valid email</p>:""}
           <button disabled={validEmail} onClick={handleSubmit}>Get started</button>
       <p>You’ll receive an email with an invite link to join.</p>
-      <img src={cross} alt="cross" width={32} height={32} onClick={e => setMenuActive()}  />
+      <img src={cross} alt="cross" width={32} height={32} onClick={e =>handleClose() }  />
           
     </div>
   )

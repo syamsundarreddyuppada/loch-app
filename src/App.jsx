@@ -47,6 +47,11 @@ function App() {
     pagination: false,
   };
   const [menuData, setmenuData] = useState(false)
+
+  const handleMenu = () => {
+      document.body.style.overflowY = "hidden";
+    setmenuData(!menuData)
+  }
   return (
     <div className="App">
       <div className="wrap">
@@ -55,7 +60,7 @@ function App() {
             <div className="notification">
               <div className="menu">
                 <img src={bell} alt="Bellicon" />
-                                              <img src={menu} className="menuImg" onClick={e => setmenuData(!menuData)} alt="menu" width={32} height={32} />
+                                              <img src={menu} className="menuImg" onClick={handleMenu} alt="menu" width={32} height={32} />
 
 
               </div>
