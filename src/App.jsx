@@ -13,6 +13,7 @@ import bell1 from "./assets/notbell.svg";
 import clock from "./assets/clock.svg";
 import chat from "./assets/bar-chart-2.svg";
 import menu from "./assets/Hamburger_icon.svg.png";
+import { useState } from "react";
 
 
 function App() {
@@ -24,13 +25,13 @@ function App() {
     arrows: false,
     fixedWidth: 353,
     fixedHeight: 137,
-    width: 700,
+        width: "45vw",
     breakpoints: {
       900: {
         perPage: 1,
         fixedWidth: 300,
         fixedHeight: 137,
-        width: "calc(100vw - 25vw)",
+        width: "calc(100vw - 20vw)",
       },
     },
   };
@@ -45,6 +46,7 @@ function App() {
     autoWidth: true,
     pagination: false,
   };
+  const [menuData, setmenuData] = useState(false)
   return (
     <div className="App">
       <div className="wrap">
@@ -53,7 +55,7 @@ function App() {
             <div className="notification">
               <div className="menu">
                 <img src={bell} alt="Bellicon" />
-                                              <img src={menu} className="menuImg" alt="menu" width={32} height={32} />
+                                              <img src={menu} className="menuImg" onClick={e => setmenuData(!menuData)} alt="menu" width={32} height={32} />
 
 
               </div>
@@ -150,7 +152,8 @@ function App() {
             </div>
           </div>
         </div>
-        <Signup />
+                <Signup menuActive={menuData} setMenuActive={setmenuData} />
+
       </div>
     </div>
   );

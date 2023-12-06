@@ -84,7 +84,7 @@
   .scroller {
     display: flex;
     gap: 14px;
-    width: 450px;
+    width: 400px;
   }
 }
 
@@ -171,6 +171,7 @@
       .menu {
         display: flex;
         justify-content: space-between;
+        padding-right: 35px;
         .menuImg {
           display: block;
         }
